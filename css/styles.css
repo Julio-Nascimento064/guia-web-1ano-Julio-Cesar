@@ -1,0 +1,250 @@
+/* Variáveis CSS */
+:root {
+    --primary: #2563EB;
+    --secondary: #10B981;
+    --neutral-dark: #111827;
+    --neutral-light: #F3F4F6;
+    --neutral-border: #E5E7EB;
+    
+    /* Espaçamentos padrão */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    
+    /* Breakpoints */
+    --mobile: 768px;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--neutral-dark);
+    background: var(--neutral-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Menu de navegação */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    padding: var(--spacing-sm);
+    transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--primary);
+}
+
+/* Menu hamburguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--neutral-dark);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hero section */
+.hero {
+    padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-lg);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: white;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Cards section */
+.tech-cards {
+    padding: var(--spacing-lg) 0;
+}
+
+.tech-cards h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.card pre {
+    background: var(--neutral-dark);
+    color: var(--neutral-light);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+}
+
+.when-to-use {
+    margin-top: var(--spacing-md);
+    font-style: italic;
+    color: var(--neutral-dark);
+}
+
+/* Footer */
+.footer {
+    background: var(--neutral-dark);
+    color: var(--neutral-light);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-lg);
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer a {
+    color: var(--neutral-light);
+    text-decoration: none;
+}
+
+.footer .credits,
+.footer .year {
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: var(--spacing-md);
+        top: var(--spacing-md);
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
