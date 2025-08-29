@@ -3,20 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxo de Trabalho - Guia Profissional de Desenvolvimento Web</title>
+    <title>Fluxograma de um Projeto Web</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <h1 class="logo">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="active">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <section class="workflow">
+            <div class="container">
+                <h2>Fluxograma de um Projeto Web</h2>
+                <p class="intro">O desenvolvimento de um projeto web envolve várias etapas cruciais, desde a concepção inicial até a manutenção contínua. Compreender este fluxo é essencial para entregar projetos de qualidade e manter um processo organizado.</p>
+
+                <!-- Placeholder para o fluxograma -->
+                <div class="flowchart-container">
+                    <img src="assets/fluxograma.png" alt="Fluxograma do processo de desenvolvimento web" class="flowchart-image">
+                </div>
+
+                <!-- Timeline horizontal -->
+                <div class="timeline">
+                    <ul>
+                        <li class="timeline-item" data-phase="discovery">
+                            <span class="phase-name">Descoberta</span>
+                        </li>
+                        <li class="timeline-item" data-phase="requirements">
+                            <span class="phase-name">Requisitos</span>
+                        </li>
+                        <li class="timeline-item" data-phase="prototype">
+                            <span class="phase-name">Protótipo</span>
+                        </li>
+                        <li class="timeline-item" data-phase="design">
+                            <span class="phase-name">Design</span>
+                        </li>
+                        <li class="timeline-item" data-phase="implementation">
+                            <span class="phase-name">Implementação</span>
+                        </li>
+                        <li class="timeline-item" data-phase="testing">
+                            <span class="phase-name">Testes</span>
+                        </li>
+                        <li class="timeline-item" data-phase="deploy">
+                            <span class="phase-name">Deploy</span>
+                        </li>
+                        <li class="timeline-item" data-phase="launch">
+                            <span class="phase-name">Publicação</span>
+                        </li>
+                        <li class="timeline-item" data-phase="maintenance">
+                            <span class="phase-name">Manutenção</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Preparado para tooltips futuros -->
+                <div class="phase-details">
+                    <!-- Será implementado com JS posteriormente -->
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="credits">Feito por Julio Cesar Nascimento</p>
+            <p class="year">&copy; <span id="current-year"></span></p>
+        </div>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>

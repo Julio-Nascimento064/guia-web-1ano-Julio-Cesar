@@ -3,20 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Guia Profissional de Desenvolvimento Web</title>
+    <title>Quiz de Desenvolvimento Web</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <h1 class="logo">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html" class="active">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <section class="quiz-section">
+            <div class="container">
+                <h2>Quiz de Desenvolvimento Web</h2>
+                <p class="intro">Teste seus conhecimentos sobre desenvolvimento web! Este quiz aborda conceitos fundamentais de HTML, CSS, JavaScript e boas práticas de desenvolvimento.</p>
+
+                <form id="quiz-form" class="quiz-form">
+                    <!-- Questão 1 -->
+                    <div class="question">
+                        <h3>1. Qual é a função principal do HTML em uma página web?</h3>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" name="q1" id="q1a" value="a">
+                                <label for="q1a">Estilizar a aparência da página</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q1" id="q1b" value="b">
+                                <label for="q1b">Definir a estrutura e o conteúdo da página</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q1" id="q1c" value="c">
+                                <label for="q1c">Adicionar interatividade à página</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q1" id="q1d" value="d">
+                                <label for="q1d">Gerenciar o banco de dados do site</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questão 2 -->
+                    <div class="question">
+                        <h3>2. Qual propriedade CSS é usada para definir o espaçamento interno de um elemento?</h3>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" name="q2" id="q2a" value="a">
+                                <label for="q2a">margin</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q2" id="q2b" value="b">
+                                <label for="q2b">padding</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q2" id="q2c" value="c">
+                                <label for="q2c">border</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q2" id="q2d" value="d">
+                                <label for="q2d">spacing</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questão 3 -->
+                    <div class="question">
+                        <h3>3. Qual é a principal função do JavaScript em uma página web?</h3>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" name="q3" id="q3a" value="a">
+                                <label for="q3a">Definir a estrutura da página</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q3" id="q3b" value="b">
+                                <label for="q3b">Estilizar elementos visuais</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q3" id="q3c" value="c">
+                                <label for="q3c">Adicionar comportamento e interatividade</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="q3" id="q3d" value="d">
+                                <label for="q3d">Gerenciar o servidor web</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preparado para mais questões posteriormente -->
+                    <div class="quiz-actions">
+                        <button type="submit" class="btn-primary">Enviar Respostas</button>
+                    </div>
+                </form>
+
+                <!-- Preparado para mostrar resultado -->
+                <div id="quiz-result" class="quiz-result" style="display: none;">
+                    <!-- Será implementado com JS posteriormente -->
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="credits">Feito por Julio Cesar Nascimento</p>
+            <p class="year">&copy; <span id="current-year"></span></p>
+        </div>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>

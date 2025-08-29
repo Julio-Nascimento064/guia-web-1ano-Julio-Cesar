@@ -3,20 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boas Práticas - Guia Profissional de Desenvolvimento Web</title>
+    <title>Boas Práticas de Desenvolvimento Web</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <h1 class="logo">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="active">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <section class="best-practices">
+            <div class="container">
+                <h2>Boas Práticas de Desenvolvimento Web</h2>
+                
+                <!-- Semântica & Acessibilidade -->
+                <article class="practice-section">
+                    <h3>Semântica & Acessibilidade</h3>
+                    <ul>
+                        <li>Use tags HTML5 semânticas (header, nav, main, section, article, aside, footer)</li>
+                        <li>Implemente ARIA labels e roles quando necessário</li>
+                        <li>Mantenha uma hierarquia adequada de cabeçalhos (h1-h6)</li>
+                        <li>Forneça textos alternativos para imagens</li>
+                        <li>Garanta contraste adequado entre texto e fundo</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code>&lt;header role="banner"&gt;
+  &lt;nav role="navigation" aria-label="Menu principal"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                    </div>
+                </article>
+
+                <!-- Responsividade -->
+                <article class="practice-section">
+                    <h3>Responsividade</h3>
+                    <ul>
+                        <li>Utilize uma abordagem mobile-first no desenvolvimento</li>
+                        <li>Use unidades relativas (rem, em, %) em vez de pixels fixos</li>
+                        <li>Implemente media queries para diferentes breakpoints</li>
+                        <li>Teste em diferentes dispositivos e orientações</li>
+                        <li>Otimize imagens para diferentes resoluções</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code>/* Mobile First */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}</code></pre>
+                    </div>
+                </article>
+
+                <!-- Organização de CSS -->
+                <article class="practice-section">
+                    <h3>Organização de CSS</h3>
+                    <ul>
+                        <li>Siga uma metodologia de nomenclatura (BEM, SMACSS, OOCSS)</li>
+                        <li>Agrupe propriedades relacionadas</li>
+                        <li>Evite especificidade excessiva de seletores</li>
+                        <li>Use variáveis CSS para valores reutilizáveis</li>
+                        <li>Mantenha um sistema de design consistente</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code>/* Variáveis CSS */
+:root {
+  --primary-color: #007bff;
+  --spacing-unit: 1rem;
+}
+
+/* BEM Methodology */
+.card { }
+.card__title { }
+.card__content { }
+.card--featured { }</code></pre>
+                    </div>
+                </article>
+
+                <!-- Performance -->
+                <article class="practice-section">
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>Otimize e comprima assets (imagens, CSS, JS)</li>
+                        <li>Use lazy loading para imagens e conteúdo pesado</li>
+                        <li>Minimize requisições HTTP</li>
+                        <li>Implemente cache adequadamente</li>
+                        <li>Utilize CDNs para conteúdo estático</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code>&lt;img 
+  src="placeholder.jpg"
+  data-src="image.jpg"
+  loading="lazy"
+  alt="Descrição"
+/&gt;
+
+// Service Worker básico
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+  );
+});</code></pre>
+                    </div>
+                </article>
+
+                <!-- Versionamento -->
+                <article class="practice-section">
+                    <h3>Versionamento</h3>
+                    <ul>
+                        <li>Use Git para controle de versão</li>
+                        <li>Mantenha commits atômicos e descritivos</li>
+                        <li>Siga um fluxo de trabalho consistente (Git Flow, Trunk Based)</li>
+                        <li>Faça code review regularmente</li>
+                        <li>Mantenha documentação atualizada</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code># Boas práticas de commit
+git commit -m "feat: adiciona sistema de login
+
+- Implementa autenticação JWT
+- Adiciona validação de formulário
+- Cria testes unitários"</code></pre>
+                    </div>
+                </article>
+
+                <!-- Boas práticas de JS -->
+                <article class="practice-section">
+                    <h3>Boas práticas de JavaScript</h3>
+                    <ul>
+                        <li>Use ES6+ features quando possível</li>
+                        <li>Implemente tratamento de erros adequado</li>
+                        <li>Evite poluição do escopo global</li>
+                        <li>Prefira funções puras e imutabilidade</li>
+                        <li>Documente código complexo</li>
+                    </ul>
+                    <div class="code-example">
+                        <pre><code>// Módulo com escopo isolado
+const UserService = (() => {
+  const state = {
+    user: null
+  };
+
+  return {
+    setUser: (userData) => {
+      state.user = { ...userData };
+    }
+  };
+})();</code></pre>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="credits">Feito por Julio Cesar Nascimento</p>
+            <p class="year">&copy; <span id="current-year"></span></p>
+        </div>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>

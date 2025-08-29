@@ -3,20 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologias - Guia Profissional de Desenvolvimento Web</title>
+    <title>Panorama de Tecnologias Web</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <h1 class="logo">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html" class="active">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <section class="tech-overview">
+            <div class="container">
+                <h2>Panorama de Tecnologias Web</h2>
+                <p class="intro">Explore as principais tecnologias utilizadas no desenvolvimento web moderno, desde frontend até DevOps. Conheça as ferramentas que impulsionam a web atual.</p>
+                
+                <!-- Preparado para filtros futuros -->
+                <div class="filters">
+                    <!-- Será implementado com JS posteriormente -->
+                </div>
+
+                <div class="tech-grid">
+                    <!-- Front-end -->
+                    <article class="tech-card">
+                        <h3>React</h3>
+                        <p class="category">Front-end</p>
+                        <p class="description">Biblioteca JavaScript para construção de interfaces de usuário interativas e reativas.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Virtual DOM, Componentes Reutilizáveis</p>
+                            <h4>Contras:</h4>
+                            <p>Curva de aprendizado inicial</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <article class="tech-card">
+                        <h3>Vue.js</h3>
+                        <p class="category">Front-end</p>
+                        <p class="description">Framework progressivo para construção de interfaces de usuário.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Fácil aprendizado, Versatilidade</p>
+                            <h4>Contras:</h4>
+                            <p>Ecossistema menor que React</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <!-- Back-end -->
+                    <article class="tech-card">
+                        <h3>Node.js</h3>
+                        <p class="category">Back-end</p>
+                        <p class="description">Runtime JavaScript que permite executar código JS no servidor.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Mesma linguagem front/back, NPM</p>
+                            <h4>Contras:</h4>
+                            <p>Callbacks hell (sem async/await)</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <article class="tech-card">
+                        <h3>Python/Django</h3>
+                        <p class="category">Back-end</p>
+                        <p class="description">Framework web robusto e maduro para Python.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Admin pronto, ORM poderoso</p>
+                            <h4>Contras:</h4>
+                            <p>Menos flexível que frameworks modernos</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <!-- Banco de dados -->
+                    <article class="tech-card">
+                        <h3>PostgreSQL</h3>
+                        <p class="category">Banco de dados</p>
+                        <p class="description">Sistema de banco de dados relacional robusto e confiável.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Confiável, Recursos avançados</p>
+                            <h4>Contras:</h4>
+                            <p>Configuração inicial complexa</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <article class="tech-card">
+                        <h3>MongoDB</h3>
+                        <p class="category">Banco de dados</p>
+                        <p class="description">Banco de dados NoSQL orientado a documentos.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Flexível, Escalável</p>
+                            <h4>Contras:</h4>
+                            <p>Não adequado para todos os casos</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <!-- DevOps -->
+                    <article class="tech-card">
+                        <h3>Docker</h3>
+                        <p class="category">DevOps</p>
+                        <p class="description">Plataforma para desenvolvimento e implantação de aplicações em containers.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Isolamento, Portabilidade</p>
+                            <h4>Contras:</h4>
+                            <p>Overhead de recursos</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <article class="tech-card">
+                        <h3>GitHub Actions</h3>
+                        <p class="category">DevOps</p>
+                        <p class="description">Automação de workflows de CI/CD integrado ao GitHub.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Integração nativa, Fácil configuração</p>
+                            <h4>Contras:</h4>
+                            <p>Limitado ao GitHub</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <!-- Testes -->
+                    <article class="tech-card">
+                        <h3>Jest</h3>
+                        <p class="category">Testes</p>
+                        <p class="description">Framework de teste JavaScript com foco em simplicidade.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>Fácil configuração, Snapshots</p>
+                            <h4>Contras:</h4>
+                            <p>Performance em projetos grandes</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+
+                    <article class="tech-card">
+                        <h3>Cypress</h3>
+                        <p class="category">Testes</p>
+                        <p class="description">Framework moderno para testes end-to-end.</p>
+                        <div class="pros-cons">
+                            <h4>Prós:</h4>
+                            <p>UI interativa, Debugging fácil</p>
+                            <h4>Contras:</h4>
+                            <p>Limitado a um navegador por vez</p>
+                        </div>
+                        <a href="#" class="tech-link">Documentação oficial</a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
-        <!-- Conteúdo será adicionado na próxima fase -->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="credits">Feito por Julio Cesar Nascimento</p>
+            <p class="year">&copy; <span id="current-year"></span></p>
+        </div>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>
